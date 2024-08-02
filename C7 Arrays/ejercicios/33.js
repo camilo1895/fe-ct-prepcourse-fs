@@ -7,6 +7,19 @@ function combine(str1, str2, str3) {
   // combine("abc", "12345", "") == "a1b2c345"
   // combine("abc", "12345", "67") == "a16b27c345"
   // Tu código:
+  
+  var fin = Math.max(str1.length,str2.length,str3.length);
+  var resultado = [];
+
+  for (var i = 0; i < fin; i++){
+    resultado.push(str1[i]);
+    resultado.push(str2[i]);
+    resultado.push(str3[i]);
+  }
+  
+ var resufinal = resultado.join("");
+ return resufinal;
+  
 }
 
 module.exports = combine;

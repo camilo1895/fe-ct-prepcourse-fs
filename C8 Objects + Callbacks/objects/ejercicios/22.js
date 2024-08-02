@@ -5,6 +5,16 @@ function esAnagrama(str1, str2) {
    // IMPORTANTE: Un anagrama es una palabra que se forma
    // con las mismas letras que otra, pero en orden diferente.
    // Tu código:
+   // Crear un objeto producto con precio y porcentaje de descuento
+
+      const normalizar = str => str.replace(/\s+/g, '').toLowerCase();
+      
+      // Normaliza y ordena las cadenas
+      const ordenar = str => normalizar(str).split('').sort().join('');
+      
+      // Compara las cadenas ordenadas
+      return ordenar(str1) === ordenar(str2);
+    
 }
 
 module.exports = esAnagrama;
